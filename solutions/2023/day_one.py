@@ -1,5 +1,5 @@
 from aocd import get_data
-from re import findall
+import regex
 
 DIGIT_MAP = {
   'zero': '0',
@@ -20,7 +20,7 @@ def get_all_lines():
 def get_line_values_part_one(lines):
   line_values = []
   for line in lines:
-    line_digits = findall(r'[0-9]', line)
+    line_digits = regex.findall(r'[0-9]', line)
     first_digit = line_digits[0]
     last_digit = line_digits[-1]
 
@@ -38,7 +38,7 @@ def convert_to_digit(num_word):
 def get_line_values_part_two(lines):
   line_values = []
   for line in lines:
-    line_digits = findall(r'([0-9]|zero|one|two|three|four|five|six|seven|eight|nine)', line)
+    line_digits = regex.findall(r'([0-9]|zero|one|two|three|four|five|six|seven|eight|nine)', line, overlapped=True)
     first_digit = line_digits[0]
     last_digit = line_digits[-1]
 
