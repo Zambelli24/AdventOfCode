@@ -1,3 +1,5 @@
+# s/o https://github.com/hyper-neutrino for the help with part 2
+
 from aocd import get_data
 
 def get_part_one_min_location():
