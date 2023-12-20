@@ -144,7 +144,7 @@ def count_inversions(all_pipes, main_loop, loc):
 
   for k in range(j):
     if (i, k) in main_loop:
-      if line[k] in '|JLS':
+      if line[k] in BELOW:
         count += 1
 
   return count
