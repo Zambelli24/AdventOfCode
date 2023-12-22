@@ -1,3 +1,5 @@
+# s/o https://github.com/hyper-neutrino for the help
+
 from aocd import get_data
 
 def get_spring_groups():
